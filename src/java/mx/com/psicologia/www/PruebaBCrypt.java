@@ -9,7 +9,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class PruebaBCrypt {
      public static void main(String[] args) {
 
-        String password = "CEBSA";
+        String password = "1234";
 
         String hash = BCrypt.hashpw(
                 password,
