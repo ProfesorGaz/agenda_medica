@@ -3,6 +3,7 @@
     Created on : 13 oct 2026, 7:34:39 a.m.
     Author     : Ing.Fco.Gaz 
 --%>
+<%@page import="mx.com.psicologia.www.Permisos"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -175,45 +176,57 @@
         <p>Bienvenido al sistema de gestión del consultorio médico.</p>
     </section>
 
-    <section class="tarjetas">
+<section class="tarjetas">
 
-        <article class="tarjeta">
-            <h2>Pacientes</h2>
-            <p>Registro y administración de los datos de los pacientes.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.PACIENTES)) { %>
+    <article class="tarjeta">
+        <h2>Pacientes</h2>
+        <p>Registro y administración de los datos de los pacientes.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-        <article class="tarjeta">
-            <h2>Médicos</h2>
-            <p>Información de los médicos y sus datos profesionales.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.MEDICOS)) { %>
+    <article class="tarjeta">
+        <h2>Médicos</h2>
+        <p>Información de los médicos y sus datos profesionales.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-        <article class="tarjeta">
-            <h2>Agenda de citas</h2>
-            <p>Organización de horarios, citas y disponibilidad médica.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.CITAS)) { %>
+    <article class="tarjeta">
+        <h2>Agenda de citas</h2>
+        <p>Organización de horarios, citas y disponibilidad médica.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-        <article class="tarjeta">
-            <h2>Consultas</h2>
-            <p>Registro de consultas y notas médicas.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.CONSULTAS)) { %>
+    <article class="tarjeta">
+        <h2>Consultas</h2>
+        <p>Registro de consultas y notas médicas.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-        <article class="tarjeta expediente">
-            <h2>Expedientes médicos</h2>
-            <p>Acceso controlado a la información clínica confidencial.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.EXPEDIENTES)) { %>
+    <article class="tarjeta expediente">
+        <h2>Expedientes médicos</h2>
+        <p>Acceso controlado a la información clínica confidencial.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-        <article class="tarjeta">
-            <h2>Usuarios</h2>
-            <p>Administración de las cuentas y permisos del sistema.</p>
-            <span class="boton">Próximamente</span>
-        </article>
+    <% if (Permisos.puede(rol, Permisos.USUARIOS)) { %>
+    <article class="tarjeta">
+        <h2>Usuarios</h2>
+        <p>Administración de las cuentas y permisos del sistema.</p>
+        <span class="boton">Próximamente</span>
+    </article>
+    <% } %>
 
-    </section>
+</section>
 </main>
 
 <footer>
