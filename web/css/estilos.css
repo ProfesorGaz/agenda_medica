@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+    background: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.marca {
+    color: #0f4c81;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.usuario {
+    text-align: right;
+    font-size: 14px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+    display: inline-block;
+    background: #1677ff;
+    color: white;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 7px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #095dcc;
+}
+
+.boton.chico {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.boton.secundario {
+    background: #64748b;
+}
+
+.boton.secundario:hover {
+    background: #475569;
+}
+
+.boton.peligro {
+    background: #c62f3e;
+}
+
+.boton.peligro:hover {
+    background: #a32431;
+}
+
+.boton:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #1677ff66;
+    outline-offset: 2px;
+}
+
+/* ---------- Encabezado de sección ---------- */
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.encabezado-seccion h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000c;
+}
+
+/* ---------- Búsqueda ---------- */
+.busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.busqueda input[type="text"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.busqueda label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* ---------- Mensajes ---------- */
+.mensaje {
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.mensaje.ok {
+    background: #d9f3e8;
+    color: #0b5b45;
+    border: 1px solid #a9e0c9;
+}
+
+.mensaje.error {
+    background: #fbdde0;
+    color: #8a1f2b;
+    border: 1px solid #f1b6bc;
+}
+
+/* ---------- Tabla ---------- */
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    color: #475569;
+    font-size: 13px;
+}
+
+td.vacio {
+    text-align: center;
+    color: #64748b;
+    padding: 34px 10px;
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+.en-linea {
+    display: inline;
+}
+
+.inactivo {
+    color: #64748b;
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo.completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.requerido {
+    color: #c62f3e;
+}
+
+.botones-form {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 18px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .usuario {
+        text-align: left;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}

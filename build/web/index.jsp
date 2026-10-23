@@ -182,7 +182,7 @@
     <article class="tarjeta">
         <h2>Pacientes</h2>
         <p>Registro y administración de los datos de los pacientes.</p>
-        <span class="boton">Próximamente</span>
+        <a class="boton" href="PacienteServlet">Abrir</a>
     </article>
     <% } %>
 
