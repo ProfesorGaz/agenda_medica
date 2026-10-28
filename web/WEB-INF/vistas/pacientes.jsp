@@ -105,7 +105,7 @@
                             <% } else if (verInactivos) { %>
                                 No hay pacientes desactivados.
                             <% } else { %>
-                                Aún no hay pacientes registrados. Agrega el primero con «Nuevo paciente».
+                                Aún no hay pacientes registrados. Agrega el primero con «Nuevo paciente».o marca «Ver desactivados» para ver los que desactivaste.
                             <% } %>
                         </td>
                     </tr>

@@ -190,7 +190,7 @@
     <article class="tarjeta">
         <h2>Médicos</h2>
         <p>Información de los médicos y sus datos profesionales.</p>
-        <span class="boton">Próximamente</span>
+        <a class="boton" href="MedicoServlet">Abrir</a>
     </article>
     <% } %>
 
